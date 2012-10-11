@@ -13,6 +13,8 @@ var options = {
     'charlesbock.com': '127.0.0.1:8080',
     'www.charlesbock.com': '127.0.0.1:8080',
     'fgsfds.com': '127.0.0.1:8080',
+    'tenk.bocksystems.com': '127.0.0.1:8080',
+    'tenk.charlesbock.com': '127.0.0.1:8080',
     'www.fgsfds.com': '127.0.0.1:8080',
     'ihacku.org': '127.0.0.1:8080',
     'www.ihacku.org': '127.0.0.1:8080',
@@ -24,9 +26,14 @@ var options = {
     'mindsforge.com': '127.0.0.1:8080',
     'www.mindsforge.com': '127.0.0.1:8080',
     'abovesobelow.com': '127.0.0.1:8080',
-    'www.abovesobelow.com': '127.0.0.1:8080'
+    'www.abovesobelow.com': '127.0.0.1:8080',
+    'www.azsilverfish.com': '127.0.0.1:8080',
+    'azsilverfish.com': '127.0.0.1:8080',
+    'www.wolfpuncher.com': '127.0.0.1:8080',
+    'wolfpuncher.com': '127.0.0.1:8080'
   }
 }
 
-var proxyServer = httpProxy.createServer(options);
-proxyServer.listen(80);
+var proxyServer = httpProxy.createServer(
+  require('./stats.js')()
+  , options).listen(80);
