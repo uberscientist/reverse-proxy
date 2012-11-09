@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "author": "Christopher Toledo",
   "description": "Using nodejitsu's node-http-proxy as reverse proxy",
+  "dependencies": {
+    "http-proxy": "*",
+    "redis": "*"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/naked/reverse-proxy.git",
